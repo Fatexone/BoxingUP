@@ -1,0 +1,381 @@
+/* Ajouter ce CSS à votre fichier index.css */
+
+/* Animation de clignotement */
+@keyframes clignoter {
+    0%, 100% {
+        background-color: #ffffff;
+        color: #000000;
+    }
+    50% {
+        background-color: #cccccc;
+        color: #000000;
+    }
+}
+
+/* Appliquer l'animation aux boutons et sélecteurs */
+button.clignotant, select.clignotant {
+    animation: clignoter 1s infini;
+}
+
+/* CSS existant version 12*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    background: url('audio/KARLITO.jpg') no-repeat center center fixed;
+    background-size: contain;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+}
+
+.control-group, .video-container, .time-selector, .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+select, input[type="number"], button {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align-last: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select option {
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
+}
+
+.video-description, .audio-description {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 90%;
+    font-size: 1rem;
+    margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+    select, input[type="number"], button, .video-description, .audio-description {
+        width: 95%;
+        font-size: 0.9rem;
+    }
+}
+
+.video-container, video, .video-description, .audio-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+video, .video-description, .audio-description {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.digital-display {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: auto;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .digital-display {
+        font-size: 2rem;
+        padding: 15px 30px;
+    }
+}
+
+.action-button, .return-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: auto;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.action-button:hover, .return-button:hover {
+    background-color: #369636;
+    transform: scale(1.05);
+}
+
+.return-button {
+    background-color: #ff4444;
+}
+
+.return-button:hover {
+    background-color: #cc0000;
+    transform: scale(0.95);
+}
+
+.loading-indicator {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#tapisImage {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.text-description {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 90%;
+    font-size: 1rem;
+    margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+    .text-description {
+        width: 95%;
+        font-size: 0.9rem;
+    }
+}
+
+.homepage-title {
+    color: red;
+}
+
+.additional-image {
+    position: absolute;
+    max-width: 200px;
+    opacity: 0.5;
+}
+
+.image-top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.image-top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.image-bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.image-bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Initialisation du style pour masquer le bouton nextAudioButton */
+#nextAudioButton {
+    display: none; /* Par défaut, le bouton est masqué */
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Rembourrage pour agrandir le bouton */
+    border-radius: 5px; /* Bords arrondis */
+    cursor: pointer; /* Curseur pointeur pour indiquer qu'il est cliquable */
+    border: none; /* Pas de bordure */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Alignement du texte */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Ombre pour donner du relief */
+    transition: background-color 0.3s, transform 0.2s; /* Transition pour les effets de survol */
+}
+
+/* Effet de survol */
+#nextAudioButton:hover {
+    background-color: #369636; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+/* Effet lors de l'appui */
+#nextAudioButton:active {
+    transform: scale(0.95); /* Rétrécissement léger lors de l'appui */
+}
+
+/* Style pour les boutons nextButton, nextButton2 et startTimerButton */
+#nextButton, #nextButton2, #startTimerButton {
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Rembourrage pour agrandir le bouton */
+    border-radius: 5px; /* Bords arrondis */
+    cursor: pointer; /* Curseur pointeur pour indiquer qu'il est cliquable */
+    border: none; /* Pas de bordure */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Alignement du texte */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Ombre pour donner du relief */
+    transition: background-color 0.3s, transform 0.2s; /* Transition pour les effets de survol */
+}
+
+/* Effet de survol */
+#nextButton:hover, #nextButton2:hover, #startTimerButton:hover {
+    background-color: #369636; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+/* Effet lors de l'appui */
+#nextButton:active, #nextButton2:active, #startTimerButton:active {
+    transform: scale(0.95); /* Rétrécissement léger lors de l'appui */
+}
+
+/* Style pour le bouton returnButtonCoaching4 */
+#returnButtonCoaching4 {
+    background-color: #652020; /* Fond rouge */
+    color: #ffffff; /* Texte blanc */
+    padding: 10px 20px; /* Rembourrage pour agrandir le bouton */
+    border-radius: 5px; /* Bords arrondis */
+    cursor: pointer; /* Curseur pointeur pour indiquer qu'il est cliquable */
+    border: none; /* Pas de bordure */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Alignement du texte */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Ombre pour donner du relief */
+    transition: background-color 0.3s, transform 0.2s; /* Transition pour les effets de survol */
+}
+
+/* Effet de survol */
+#returnButtonCoaching4:hover {
+    background-color: #cc0000; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+/* Effet lors de l'appui */
+#returnButtonCoaching4:active {
+    transform: scale(0.95); /* Rétrécissement léger lors de l'appui */
+}
+
+/* Style pour le bouton retourneMenue */
+#retourneMenue {
+    background-color: #552c2c; /* Fond rouge */
+    color: #ffffff; /* Texte blanc */
+    padding: 10px 20px; /* Rembourrage pour agrandir le bouton */
+    border-radius: 5px; /* Bords arrondis */
+    cursor: pointer; /* Curseur pointeur pour indiquer qu'il est cliquable */
+    border: none; /* Pas de bordure */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Alignement du texte */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Ombre pour donner du relief */
+    transition: background-color 0.3s, transform 0.2s; /* Transition pour les effets de survol */
+}
+
+/* Effet de survol */
+#retourneMenue:hover {
+    background-color: #cc0000; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+/* Effet lors de l'appui */
+#retourneMenue:active {
+    transform: scale(0.95); /* Rétrécissement léger lors de l'appui */
+}
+
+/* Supprimer l'animation de clignotement pour retourneMenue */
+#retourneMenue.clignotant {
+    animation: none; /* Désactiver l'animation de clignotement */
+}
+
+/* Ajouter ce CSS à votre fichier index.css */
+
+/* Conteneur pour centrer le logo */
+#logoContainer {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Ajustez cette hauteur selon la taille de votre logo */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Ajustez le marge selon vos besoins */
+}
+
+/* Animation pour le logo test*/
+#animatedLogo {
+    position: absolute;
+    top: 0;
+    left: -200px; /* Commence en dehors de l'écran, ajustez selon la taille de votre logo */
+    animation: moveLogo 5s linear infinite;
+}
+
+/* Définir l'animation */
+@keyframes moveLogo {
+    0% {
+        left: -200px; /* Commence en dehors de l'écran */
+    }
+    50% {
+        left: calc(100% - 200px); /* Se déplace jusqu'au bord droit de l'écran */
+    }
+    100% {
+        left: -200px; /* Retourne au début */
+    }
+}
